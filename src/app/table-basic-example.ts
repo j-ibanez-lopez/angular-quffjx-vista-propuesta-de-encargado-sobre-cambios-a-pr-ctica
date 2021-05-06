@@ -1,18 +1,22 @@
 import {Component} from '@angular/core';
 
 export interface PeriodicElement {
-  nombre encargado: string;
-  rut: string;
-  empresa: string;
-  symbol: string;
+  nombre_encargado: string;
+  carrera: string;
+  fecha: string; //Sí, debería ser tipo 'Date' pero lo dejé en string para no gastar mucho tiempo en diseño
+  estado: string;
+  revisar_propuesta: string;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {rut: '18.756.432-6', nombre: 'Mariana', empresa: 1.0079, symbol: 'H'},
-  {rut: '19.999.543-5', nombre: 'Luis', weight: 4.0026, symbol: 'He'},
-  {rut: '20.543.987-5', nombre: 'Pedro', weight: 6.941, symbol: 'Li'},
-  {rut: '19.656.872-5', nombre: 'Cristina', weight: 9.0122, symbol: 'Be'},
-  {rut: '19.164.461-0', nombre: 'Jaqueline', weight: 10.811, symbol: 'B'}
+  {nombre_encargado: 'Mariana', carrera: 'Ing. civil Electrica', 
+  fecha: '2020-04-20', estado: 'Pendiente', revisar_propuesta: 'Revisar'},
+  {nombre_encargado: 'Luis', carrera: 'Ing. civil Industrial', 
+  fecha: '2020-06-28', estado: 'Pendiente', revisar_propuesta: 'Revisar'},
+  {nombre_encargado: 'Rodrigo', carrera: 'Ing. civil Computación', 
+  fecha: '2020-07-12', estado: 'Aprobada', revisar_propuesta: ''},
+  {nombre_encargado: 'Mariana', carrera: 'Ing. civil Electrica', 
+  fecha: '2020-03-02', estado: 'Rechazada', revisar_propuesta: 'Visualizar'}
 ];
 
 /**
@@ -24,7 +28,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   templateUrl: 'table-basic-example.html',
 })
 export class TableBasicExample {
-  displayedColumns: string[] = ['rut', 'nombre', 'empresa', 'symbol'];
+  displayedColumns: string[] = ['nombre_encargado', 'carrera', 'fecha', 'estado', 'revisar_propuesta'];
   dataSource = ELEMENT_DATA;
 }
 
