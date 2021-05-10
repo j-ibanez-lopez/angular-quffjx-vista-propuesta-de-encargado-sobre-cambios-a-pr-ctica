@@ -3,20 +3,20 @@ import {Component} from '@angular/core';
 export interface PeriodicElement {
   nombre_encargado: string;
   carrera: string;
-  fecha: string; //Sí, debería ser tipo 'Date' pero lo dejé en string para no gastar mucho tiempo en diseño
-  estado: string;
-  revisar_propuesta: string;
+  rol: string;
+  estado_cuenta: string;
+  editar_estado: string;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
   {nombre_encargado: 'Mariana', carrera: 'Ing. civil Electrica', 
-  fecha: '2020-04-20', estado: 'Pendiente', revisar_propuesta: 'Revisar'},
+  rol: 'Alumno/a', estado_cuenta: 'Habilitada', editar_estado: 'Deshabilitar'},
   {nombre_encargado: 'Luis', carrera: 'Ing. civil Industrial', 
-  fecha: '2020-06-28', estado: 'Pendiente', revisar_propuesta: 'Revisar'},
+  rol: 'Alumno/a', estado_cuenta: 'Deshabilitada', editar_estado: 'Habilitar'},
   {nombre_encargado: 'Rodrigo', carrera: 'Ing. civil Computación', 
-  fecha: '2020-07-12', estado: 'Aprobada', revisar_propuesta: ''},
+  rol: 'Encargado/a de carrera', estado_cuenta: 'Habilitada', editar_estado: 'Deshabilitar'},
   {nombre_encargado: 'Mariana', carrera: 'Ing. civil Electrica', 
-  fecha: '2020-03-02', estado: 'Rechazada', revisar_propuesta: 'Visualizar'}
+  rol: 'Encargado/a de carrera', estado_cuenta: 'Habilitada', editar_estado: 'Deshabilitar'}
 ];
 
 /**
@@ -28,7 +28,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   templateUrl: 'table-basic-example.html',
 })
 export class TableBasicExample {
-  displayedColumns: string[] = ['nombre_encargado', 'carrera', 'fecha', 'estado', 'revisar_propuesta'];
+  displayedColumns: string[] = ['nombre_encargado', 'carrera', 'rol', 'estado_cuenta', 'editar_estado'];
   dataSource = ELEMENT_DATA;
 }
 
