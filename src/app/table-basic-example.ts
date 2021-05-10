@@ -6,17 +6,18 @@ export interface PeriodicElement {
   rol: string;
   estado_cuenta: string;
   editar_estado: string;
+  cambiar_contrasena: string;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
   {nombre_encargado: 'Mariana', carrera: 'Ing. civil Electrica', 
-  rol: 'Alumno/a', estado_cuenta: 'Habilitada', editar_estado: 'Deshabilitar'},
+  rol: 'Alumno/a', estado_cuenta: 'Habilitada', editar_estado: 'Deshabilitar', cambiar_contrasena: 'cambiar contraseña'},
   {nombre_encargado: 'Luis', carrera: 'Ing. civil Industrial', 
-  rol: 'Alumno/a', estado_cuenta: 'Deshabilitada', editar_estado: 'Habilitar'},
+  rol: 'Alumno/a', estado_cuenta: 'Deshabilitada', editar_estado: 'Habilitar', cambiar_contrasena: 'cambiar contraseña'},
   {nombre_encargado: 'Rodrigo', carrera: 'Ing. civil Computación', 
-  rol: 'Encargado/a de carrera', estado_cuenta: 'Habilitada', editar_estado: 'Deshabilitar'},
-  {nombre_encargado: 'Mariana', carrera: 'Ing. civil Electrica', 
-  rol: 'Encargado/a de carrera', estado_cuenta: 'Habilitada', editar_estado: 'Deshabilitar'}
+  rol: 'Encargado/a de carrera', estado_cuenta: 'Habilitada', editar_estado: 'Deshabilitar', cambiar_contrasena: 'cambiar contraseña'},
+  {nombre_encargado: 'Mariana', carrera: '-', 
+  rol: 'Administrador/a general', estado_cuenta: 'Habilitada', editar_estado: 'Deshabilitar', cambiar_contrasena: 'cambiar contraseña'}
 ];
 
 /**
@@ -28,7 +29,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   templateUrl: 'table-basic-example.html',
 })
 export class TableBasicExample {
-  displayedColumns: string[] = ['nombre_encargado', 'carrera', 'rol', 'estado_cuenta', 'editar_estado'];
+  displayedColumns: string[] = ['nombre_encargado', 'carrera', 'rol', 'estado_cuenta', 'editar_estado', 'cambiar_contrasena'];
   dataSource = ELEMENT_DATA;
 }
 

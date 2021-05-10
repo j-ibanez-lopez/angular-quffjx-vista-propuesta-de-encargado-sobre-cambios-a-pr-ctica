@@ -21,16 +21,22 @@
     <td mat-cell *matCellDef="let element"> {{element.rol}} </td>
   </ng-container>
 
-  <!-- estado Column -->
+  <!-- estado_cuenta Column -->
   <ng-container matColumnDef="estado_cuenta">
     <th mat-header-cell *matHeaderCellDef> Estado cuenta</th>
     <td mat-cell *matCellDef="let element"> {{element.estado_cuenta}} </td>
   </ng-container>
 
-  <!-- revisar_propuesta Column -->
+  <!-- editar_estado Column -->
   <ng-container matColumnDef="editar_estado">
     <th mat-header-cell *matHeaderCellDef>  </th>
     <td mat-cell *matCellDef="let element"> {{element.editar_estado}} </td>
+  </ng-container>
+
+  <!-- cambiar_contrasena Column -->
+  <ng-container matColumnDef="cambiar_contrasena">
+    <th mat-header-cell *matHeaderCellDef> </th>
+    <td mat-cell *matCellDef="let element"> {{element.cambiar_contrasena}} </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
